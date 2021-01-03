@@ -3,7 +3,7 @@ const dogs = express.Router();
 const Dog = require('../models/dogs');
 
 //INDEX
-dogs.get('/doggos', async (req, res) => {
+dogs.get('/', async (req, res) => {
     try {
         //get dogs from mongo
         const foundDogs = await Dog.find({});
@@ -14,7 +14,7 @@ dogs.get('/doggos', async (req, res) => {
 });
 
 //CREATE
-dogs.post('/create', async (req, res) => {
+dogs.post('/', async (req, res) => {
     try{
         const createdDog = await Dog.create(req.body);
         res.status(200).json(createdDog)
@@ -23,7 +23,7 @@ dogs.post('/create', async (req, res) => {
     }
 });
 //DELETE
-dogs.delete('/doggos/:id', async (req, res) => {
+dogs.delete('/:id', async (req, res) => {
     try{
         const deletedDog = await Dog.findByIdAndRemove(req.params.id);
         res.status(200).json(deletedDog);
@@ -32,7 +32,7 @@ dogs.delete('/doggos/:id', async (req, res) => {
     }
 })
 //UPDATE
-dogs.put('/doggos/:id', async (req, res) => {
+dogs.put('/:id', async (req, res) => {
     try{
         const updatedDog = await Dog.findByIdAndUpdate(req.params.id);
         res.status(200).json(updatedDog);
@@ -41,7 +41,7 @@ dogs.put('/doggos/:id', async (req, res) => {
     }
 })
 //SHOW
-dogs.get('/doggos', async (req, res) => {
+dogs.get('/:id', async (req, res) => {
     try{
         const showDog = await Dog.findById(req.params.id);
         rest.status(200).json(showDog)

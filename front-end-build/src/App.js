@@ -1,13 +1,13 @@
 import './App.css';
 import {Route, Link, Switch} from 'react-router-dom';
-
+import { useEffect, useState} from 'react'
 import Home from './Components/Home/Home'
 import Dogs from './Components/Dogs/Dogs';
 import UserDogs from './Components/userdogs/UserDogs';
-// import DogRateForm from './Components/DogRateForm/DogRateForm';
 
 
 function App() {
+
   return (
     <div className="App">
       {/* <h1>Tinder Meets WeRateDogs Meets Instagram</h1> */}
@@ -18,9 +18,8 @@ function App() {
       </nav>
       <Switch className="switch">
       <Route exact path="/doggos" component={Home} />
-      <Route path="/ratedogs" component={Dogs} />
+      <Route path="/ratedogs" component={Dogs}/>
       <Route path="/userdogs" component={UserDogs} />
-      {/* <DogRateForm/> */}
       </Switch>
       
 

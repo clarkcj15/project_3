@@ -29,5 +29,5 @@ mongoose.connection.once('open', () => {
 app.use('/doggos', dogsController);
 
 app.listen(PORT, () => {
-    show('🐶', 'bork bork')
+    show('🐶', 'bork bork', PORT)
 });
