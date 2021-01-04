@@ -1,4 +1,5 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
+import {useEffect, useState} from 'react';
 import DogRateForm from '../../DogRateForm';
 
 
@@ -6,19 +7,21 @@ const Dogs = () => {
     const [doggo, showDog] = useState([]);
     const [ratedDoggo, showList] = useState([]);
     const dogURL = "https://dog.ceo/api/breeds/image/random";  
-    const ratedURL = "https://localhost:3000/doggos";  
+    const ratedURL = "http://localhost:3000/ratedogs";  
     const getDoggo = async () => {
         try{
         const response = await fetch(dogURL);
         const data = await response.json();
         console.log(data);
         showDog(data);
+        getRatedDoggo();
         } catch (error) {
             console.log(error);
         }
     }
     useEffect(() => {
         getDoggo();
+        getRatedDoggo();
     }, []);
     
     const getRatedDoggo = async () => {
@@ -46,14 +49,15 @@ const Dogs = () => {
                         return(
                             <li>
                                 <img src={ratedDoggo.message} height="200px" width="200px" alt=""/> <br/>
-                                {`${ratedDoggo.dogRate}`} <br/>
-                                {`${ratedDoggo.dogDescription}`}
+                                {ratedDoggo.dogRate} <br/>
+                                {ratedDoggo.dogDescription}
+                                {ratedDoggo._id}
                             </li>
                         )
                     })
                 }
             </ul>
         </div>
-        )
+    )
 }
 export default Dogs;

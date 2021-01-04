@@ -14,7 +14,7 @@ export default ({ratedDoggo, getDoggo}) => {
         });
         event.currentTarget.reset();
         try{
-            await fetch('http://localhost:3000/doggos', {
+            await fetch('http://localhost:3000/ratedogs', {
                 method: 'POST',
                 headers: {
                     'Conent-type': 'application/json'
@@ -28,14 +28,20 @@ export default ({ratedDoggo, getDoggo}) => {
         }
     }
     const getRatedDoggo = async (event) => {
-
+        event.preventDefault();
+        const dogRate = dogRateInput.current.value;
+        const dogDescription = dogDescriptionInput.current.value;
+        const body = JSON.stringify({
+            dogRate, dogDescription
+        });
+        event.currentTarget.reset();
         try{
-            await fetch('http://localhost:3000/doggos', {
+            await fetch('http://localhost:3000/ratedogs', {
                 method: 'GET',
                 headers: {
                     'Conent-type': 'application/json'
                 },
-                // body: body
+                body: body
             })
             getRatedDoggo()
         } catch(error){

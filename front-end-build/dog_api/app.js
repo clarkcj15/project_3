@@ -4,7 +4,8 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 3000;
-const dogsController = require('./controllers/dogs')
+const dogsController = require('./controllers/dogs');
+const ratedogsController = require('./controllers/ratedogs');
 const MONGOURI = process.env.MONGODB_URI;
 const show = { show: console.log }.show;
 
@@ -27,6 +28,7 @@ mongoose.connection.once('open', () => {
 })
 
 app.use('/doggos', dogsController);
+app.use('/ratedogs', ratedogsController);
 
 app.listen(PORT, () => {
     show('🐶', 'bork bork', PORT)
