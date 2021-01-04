@@ -6,8 +6,8 @@ const RateDog = require('../models/ratedogs');
 ratedogs.get('/', async (req, res) => {
     try {
         //get dogs from mongo
-        const foundDogs = await RateDog.find({});
-        res.status(200).json(foundDogs);
+        const foundRateDogs = await RateDog.find({});
+        res.status(200).json(foundRateDogs);
     }catch(error) {
         res.status(400).json(error)
     }
@@ -15,9 +15,10 @@ ratedogs.get('/', async (req, res) => {
 
 //CREATE
 ratedogs.post('/', async (req, res) => {
+    console.log(req.body);
     try{
-        const createdDog = await RateDog.create(req.body);
-        res.status(200).json(createdDog)
+        const createdRateDog = await RateDog.create(req.body);
+        res.status(200).json(createdRateDog)
     }catch(error) {
         res.status(400).json(error)
     }
@@ -25,8 +26,8 @@ ratedogs.post('/', async (req, res) => {
 //DELETE
 ratedogs.delete('/:id', async (req, res) => {
     try{
-        const deletedDog = await RateDog.findByIdAndRemove(req.params.id);
-        res.status(200).json(deletedDog);
+        const deletedRateDog = await RateDog.findByIdAndRemove(req.params.id);
+        res.status(200).json(deletedRateDog);
     } catch(error) {
         res.status(400).json(error)
     }
@@ -34,8 +35,8 @@ ratedogs.delete('/:id', async (req, res) => {
 //UPDATE
 ratedogs.put('/:id', async (req, res) => {
     try{
-        const updatedDog = await RateDog.findByIdAndUpdate(req.params.id);
-        res.status(200).json(updatedDog);
+        const updatedRateDog = await RateDog.findByIdAndUpdate(req.params.id);
+        res.status(200).json(updatedRateDog);
     }catch (error) {
         res.status(400).json(error);
     }
@@ -43,8 +44,8 @@ ratedogs.put('/:id', async (req, res) => {
 //SHOW
 ratedogs.get('/:id', async (req, res) => {
     try{
-        const showDog = await RateDog.findById(req.params.id);
-        rest.status(200).json(showDog)
+        const showRateDog = await RateDog.findById(req.params.id);
+        rest.status(200).json(showRateDog)
     } catch (error) {
         res.status(400).json(error);
     }

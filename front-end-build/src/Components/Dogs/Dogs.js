@@ -42,16 +42,15 @@ const Dogs = () => {
             </header>
             
             <img className="i" src={doggo.message} height="200px" width="250"/>
-            <DogRateForm getDoggo={getDoggo} ratedDoggo={ratedDoggo}/>
+            <DogRateForm getDoggo={getDoggo} ratedDoggo={ratedDoggo} doggo={doggo}/>
             <ul className="DRF">
                 {
                     ratedDoggo.map(ratedDoggo => {
                         return(
                             <li>
-                                <img src={ratedDoggo.message} height="200px" width="200px" alt=""/> <br/>
-                                {ratedDoggo.dogRate} <br/>
-                                {ratedDoggo.dogDescription}
-                                {ratedDoggo._id}
+                                <img src={ratedDoggo.image} height="200px" width="200px" alt=""/> <br/>
+                                {ratedDoggo.rate} /10 <br/>
+                                {ratedDoggo.description}
                             </li>
                         )
                     })
