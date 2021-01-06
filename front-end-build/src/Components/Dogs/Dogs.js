@@ -52,15 +52,15 @@ const Dogs = () => {
                         return(
                             <li>
                             
-                            <Card style={{width: '20rem'}}>
-                            <Card.Img variant="top" style={{width: '20rem'}} src={ratedDoggo.image}/>
-                            <Card.Body>
-                                <ListGroup horizontal>
-                                <ListGroup.Item style={{width: '10rem'}} > {ratedDoggo.rate} /10 </ListGroup.Item>
-                                <ListGroup.Item style={{width: '10rem'}} > {ratedDoggo.description} </ListGroup.Item>
-                                </ListGroup>
-                            </Card.Body>    
-                            </Card>
+                                <Card style={{width: '20rem'}}>
+                                    <Card.Img variant="top" style={{width: '20rem'}} src={ratedDoggo.image}/>
+                                    <Card.Body>
+                                        <ListGroup horizontal>
+                                            <ListGroup.Item style={{width: '10rem'}} > {ratedDoggo.rate} /10 </ListGroup.Item>
+                                            <ListGroup.Item style={{width: '10rem'}} > {ratedDoggo.description} </ListGroup.Item>
+                                        </ListGroup>
+                                    </Card.Body>    
+                                </Card>
 
                             </li>
                         )
