@@ -9,7 +9,7 @@ const Dogs = () => {
     const [doggo, showDog] = useState([]);
     const [ratedDoggo, showList] = useState([]);
     const dogURL = "https://dog.ceo/api/breeds/image/random";  
-    const ratedURL = "http://localhost:3000/ratedogs";  
+    const ratedURL = "https://dog-rate-app.herokuapp.com/api/ratedogs";  
     const getDoggo = async () => {
         try{
         const response = await fetch(dogURL);

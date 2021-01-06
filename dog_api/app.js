@@ -27,8 +27,8 @@ mongoose.connection.once('open', () => {
     show('MonGO')
 })
 
-app.use('/doggos', dogsController);
-app.use('/ratedogs', ratedogsController);
+app.use('/api/doggos', dogsController);
+app.use('/api/ratedogs', ratedogsController);
 
 app.listen(PORT, () => {
     show('🐶', 'bork bork', PORT)

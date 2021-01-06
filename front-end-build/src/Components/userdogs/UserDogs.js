@@ -7,7 +7,7 @@ const UserDogs = () => {
     const [userDogs, setUserDogs] = useState([])
     const fetchUserDogs = async () => {
         try{
-            const response = await fetch('http://localhost:3000/doggos');
+            const response = await fetch('https://dog-rate-app.herokuapp.com/api/doggos');
             const data = await response.json();
             setUserDogs(data);
         } catch (error) {
