@@ -1,4 +1,5 @@
 import { useRef, useEffect } from 'react';
+import Form from 'react-bootstrap/Form';
 
 export default ({ratedDoggo, getDoggo, doggo}) => {
     const dogRateInput = useRef(null);
@@ -52,9 +53,17 @@ export default ({ratedDoggo, getDoggo, doggo}) => {
     
     return(
         <form onSubmit={createRating}>
-            Rate:<input className="fi" type="number" name="dogRate" ref={dogRateInput}/> /10 <br/>
-           Describe this dog: <input className="fi" type="text" name="dogDescription" ref={dogDescriptionInput}/> <br/>
-           <input type="submit" value="Rate This Dog"/>
+        <Form.Group>
+        <Form.Label>Dog Rate</Form.Label>
+        <Form.Control type="number" placeholder="Rate This Dog" /> /10
+        </Form.Group>
+        <Form.Group>
+        <Form.Label>Describe This Dog</Form.Label>
+        <Form.Control type="text" placeholder="Describe This Dog"/>
+        </Form.Group>
+         Rate:<input className="fi" type="number" name="dogRate" ref={dogRateInput}/> /10 <br/>
+        Describe this dog: <input className="fi" type="text" name="dogDescription" ref={dogDescriptionInput}/> <br/>
+        <input type="submit" value="Rate This Dog"/>
         </form>
     )
 

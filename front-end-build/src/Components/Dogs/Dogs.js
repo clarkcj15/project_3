@@ -2,7 +2,6 @@ import React from 'react';
 import {useEffect, useState} from 'react';
 import DogRateForm from '../../DogRateForm';
 
-
 const Dogs = () => {
     const [doggo, showDog] = useState([]);
     const [ratedDoggo, showList] = useState([]);

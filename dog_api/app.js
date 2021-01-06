@@ -33,3 +33,5 @@ app.use('/ratedogs', ratedogsController);
 app.listen(PORT, () => {
     show('🐶', 'bork bork', PORT)
 });
+
+module.exports = app;

@@ -1,0 +1,30 @@
+{
+  "engines": {
+    "node": "15.0.1"
+  },
+  "name": "project_3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clarkcj15/project_3.git"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.9"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clarkcj15/project_3/issues"
+  },
+  "homepage": "https://github.com/clarkcj15/project_3#readme"
+}
