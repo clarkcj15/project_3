@@ -1,4 +1,4 @@
 const express = require('express');
-const app = requite('./dog_api/app')
+const app = require('./dog_api/app')
 
 app.use(express.static('build'));

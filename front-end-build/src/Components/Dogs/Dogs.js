@@ -1,6 +1,9 @@
 import React from 'react';
 import {useEffect, useState} from 'react';
 import DogRateForm from '../../DogRateForm';
+import ListGroup from 'react-bootstrap/ListGroup';
+import Card from 'react-bootstrap/esm/Card';
+
 
 const Dogs = () => {
     const [doggo, showDog] = useState([]);
@@ -40,16 +43,25 @@ const Dogs = () => {
             <h1>Rate Our Dogs!</h1>
             </header>
             
-            <img className="i" src={doggo.message} height="200px" width="250"/>
+            <Card style={{width: '20rem'}}><img className="i" src={doggo.message} height="200px" width="250"/></Card>
+            
             <DogRateForm getDoggo={getDoggo} ratedDoggo={ratedDoggo} doggo={doggo}/>
             <ul className="DRF">
                 {
                     ratedDoggo.map(ratedDoggo => {
                         return(
                             <li>
-                                <img src={ratedDoggo.image} height="200px" width="200px" alt=""/> <br/>
-                                {ratedDoggo.rate} /10 <br/>
-                                {ratedDoggo.description}
+                            
+                            <Card style={{width: '20rem'}}>
+                            <Card.Img variant="top" style={{width: '20rem'}} src={ratedDoggo.image}/>
+                            <Card.Body>
+                                <ListGroup horizontal>
+                                <ListGroup.Item style={{width: '10rem'}} > {ratedDoggo.rate} /10 </ListGroup.Item>
+                                <ListGroup.Item style={{width: '10rem'}} > {ratedDoggo.description} </ListGroup.Item>
+                                </ListGroup>
+                            </Card.Body>    
+                            </Card>
+
                             </li>
                         )
                     })
@@ -59,3 +71,6 @@ const Dogs = () => {
     )
 }
 export default Dogs;
+
+
+{/* <img src={ratedDoggo.image} height="200px" width="200px" alt=""/> <br/> */}

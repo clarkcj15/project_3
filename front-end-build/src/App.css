@@ -1,4 +1,18 @@
-
+*{
+  background-color: #74E6F3;
+}
+div .card-body, .card-title.h5, .card-text  {
+  background-color: whitesmoke;
+}
+div.form-group {
+  flex-direction: inline;
+}
+h3 {
+  color: #445658;
+}
+ul.DRF{
+  list-style-type: none;
+}
 .nav {
   display: flex;
   justify-content: center;
