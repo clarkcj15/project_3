@@ -1,6 +1,8 @@
 import React from 'react';
 import {useState, useEffect} from 'react';
 import UserDogForm from '../../UserDogForm'
+import ListGroup from 'react-bootstrap/ListGroup';
+import Card from 'react-bootstrap/esm/Card';
 
 
 const UserDogs = () => {
@@ -27,15 +29,19 @@ const UserDogs = () => {
 
             <h3>Give the requested information to create your very own dog rating</h3>
             <UserDogForm fetchUserDogs={fetchUserDogs} userDogs={userDogs}/>
-            <ul className="UDF">
+            <ul className="user-dog-form">
             {
                 userDogs.map(userDogs => {
                     return(
                         <li>
-                            <img src={userDogs.image} height="200px" width="200px" alt=""/> <br/>
-                            {`${userDogs.breed}`} <br/>
-                            {`${userDogs.rate}`} /10 <br/>
-                            {`${userDogs.description}`}
+                            <Card style={{width: '20rem'}} className="text-center">
+                                <Card.Img variant="top" style={{width: '20rem'}} src={userDogs.image} /> <br/>
+                                <Card.Body>
+                                    <ListGroup.Item style={{width: '10rem'}}>{`${userDogs.breed}`}</ListGroup.Item> <br/>
+                                    <ListGroup.Item style={{width: '10rem'}}>{`${userDogs.rate}`}/10</ListGroup.Item>  <br/>
+                                    <ListGroup.Item style={{width: '10rem'}}>{`${userDogs.description}`}</ListGroup.Item> 
+                                </Card.Body>
+                            </Card>
                         </li>
                     )
                 })

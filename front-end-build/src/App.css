@@ -1,16 +1,34 @@
 *{
   background-color: #74E6F3;
 }
+button.btn.btn-primary{
+  display: flex;
+  flex-direction: center;
+}
 div .card-body, .card-title.h5, .card-text  {
   background-color: whitesmoke;
 }
 div.form-group {
   flex-direction: inline;
 }
+div.card-body {
+  display: flex;
+  flex-direction: row;
+}
 h3 {
   color: #445658;
 }
-ul.DRF{
+
+ul.user-dog-form{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style-type: none;
+}
+ul.dog-list{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
   list-style-type: none;
 }
 .nav {

@@ -36,21 +36,21 @@ export default ({userDogs, fetchUserDogs}) => {
         <Form onSubmit={createUserDog}>
         <Form.Row className="align-items-center">
         <Col xs="auto">
-            <Form.Group>
+            <Form.Group class="user-d-form">
 
-            <Form.Label>Image</Form.Label>
+            <Form.Label>Image URL:</Form.Label>
             <Form.Control type="text" placeholder="Input Image URL" ref={imageInputRef} />
              <br/>
 
-            <Form.Label>Breed</Form.Label>
+            <Form.Label>Breed:</Form.Label>
             <Form.Control type="text" placeholder="Input Dog Breed" ref={breedInputRef}/>
              <br/>
 
-            <Form.Label>Rate Your Dog</Form.Label>
+            <Form.Label>Rate:</Form.Label>
             <Form.Control type="number" placeholder="Rate Your Dog" ref={rateInputRef}/> /10
              <br/>
 
-            <Form.Label>Description</Form.Label>
+            <Form.Label>Description:</Form.Label>
             <Form.Control type="text" placeholder="Describe Your Dog" ref={descriptionInputRef}/>
             <Button type="submit">Rate Your Dog</Button>{' '}
             </Form.Group> <br/>
