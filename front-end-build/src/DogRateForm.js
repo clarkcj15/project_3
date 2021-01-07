@@ -17,7 +17,7 @@ export default ({ratedDoggo, getDoggo, doggo}) => {
         event.currentTarget.reset();
         console.log(body);
         try{
-            await fetch('http://localhost:3000/ratedogs', {
+            await fetch('https://dog-rate-app.herokuapp.com/api/ratedogs', {
                 method: 'POST',
                 headers: {
                     'Content-type': 'application/json'

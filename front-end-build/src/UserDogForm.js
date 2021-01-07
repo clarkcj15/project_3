@@ -20,7 +20,7 @@ export default ({userDogs, fetchUserDogs}) => {
         });
         event.currentTarget.reset();
         try {
-            await fetch('http://localhost:3000/doggos', {
+            await fetch('https://dog-rate-app.herokuapp.com/api/doggos', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
