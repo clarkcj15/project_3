@@ -3,7 +3,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 
-export default ({userDogs, fetchUserDogs}) => {
+export default ({userDogs, fetchUserDogs, _id}) => {
     const imageInputRef = useRef(null);
     const breedInputRef = useRef(null);
     const rateInputRef = useRef(null);
@@ -20,7 +20,7 @@ export default ({userDogs, fetchUserDogs}) => {
         });
         event.currentTarget.reset();
         try {
-            await fetch('https://dog-rate-app.herokuapp.com/api/doggos', {
+            await fetch(`https://dog-rate-app.herokuapp.com/api/doggos${_id}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

@@ -4,9 +4,11 @@ import { useEffect, useState} from 'react'
 import Home from './Components/Home/Home'
 import Dogs from './Components/Dogs/Dogs';
 import UserDogs from './Components/userdogs/UserDogs';
+// import UpdateUserDogs from './UpdateUserDogs';
+// import UpdateApiDogs from './UpdateApiDogs';
 
 
-function App() {
+function App({}) {
 
   return (
     <div className="App">
@@ -20,6 +22,8 @@ function App() {
       <Route exact path="/doggos" component={Home} />
       <Route path="/ratedogs" component={Dogs}/>
       <Route path="/userdogs" component={UserDogs} />
+      {/* <Route path={`/api/ratedogs/${ratedDoggo._id}`} component={UpdateUserDogs}/>
+      <Route path={`/api/doggos/${userDogs._id}`} component={UpdateApiDogs}/> ratedDoggo, userDogs, _id */}
       </Switch>
       
 

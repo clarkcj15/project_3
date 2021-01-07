@@ -35,7 +35,7 @@ const UserDogs = () => {
                     return(
                         <li>
                             <Card style={{width: '20rem'}} className="text-center">
-                                <Card.Img variant="top" style={{width: '20rem'}} src={userDogs.image} /> <br/>
+                            <a href={`/api/ratedogs/${userDogs._id}`}><Card.Img variant="top" style={{width: '20rem'}} src={userDogs.image} /> </a> <br/>
                                 <Card.Body>
                                     <ListGroup.Item style={{width: '10rem'}}>{`${userDogs.breed}`}</ListGroup.Item> <br/>
                                     <ListGroup.Item style={{width: '10rem'}}>{`${userDogs.rate}`}/10</ListGroup.Item>  <br/>

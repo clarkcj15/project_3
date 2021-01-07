@@ -34,8 +34,8 @@ export default (props) => {
         };
             return (
             <form onSubmit={updateApiDogs}>
-                <label>Rate:<input type="number" ref={updateDogRateInputRef} /></label>
-                <label>Description:<input type="text" ref={updateDogDescriptionInputRef} /></label>
+                Rate:<input type="number" ref={updateDogRateInputRef} />
+                Description:<input type="text" ref={updateDogDescriptionInputRef} />
                 <input type="submit" value="Update Dog" />
             </form>
             );
