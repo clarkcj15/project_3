@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-export default (props) => {
+export default ({props, _id}) => {
     const updateDogRateInputRef = useRef(null);
     const updateDogDescriptionInputRef = useRef(null);
     
