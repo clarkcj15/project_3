@@ -1,11 +1,12 @@
 import React from 'react';
 import {useEffect, useState} from 'react';
 import DogRateForm from '../../DogRateForm';
+import UpdateApiDogs from '../../UpdateApiDogs';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Card from 'react-bootstrap/esm/Card';
+import Button from 'react-bootstrap/esm/Button';
 
-
-const Dogs = () => {
+const Dogs = ({updateApiDogs}) => {
     const [doggo, showDog] = useState([]);
     const [ratedDoggo, showList] = useState([]);
     const dogURL = "https://dog.ceo/api/breeds/image/random";  
@@ -53,11 +54,12 @@ const Dogs = () => {
                             <li>
                             
                                 <Card style={{width: '20rem'}} className="text-center">
-                                    <Card.Img variant="top" style={{width: '20rem'}} src={ratedDoggo.image}/>
+                                    <a href={`/api/ratedogs/${ratedDoggo._id}`}> <Card.Img variant="top" style={{width: '20rem'}} src={ratedDoggo.image}/></a>
                                     <Card.Body>
                                         <ListGroup horizontal>
-                                            <ListGroup.Item style={{width: '10rem'}} > {ratedDoggo.rate} /10 </ListGroup.Item>
-                                            <ListGroup.Item style={{width: '10rem'}} > {ratedDoggo.description} </ListGroup.Item>
+                                            <ListGroup.Item style={{width: '8rem'}} > {ratedDoggo.rate} /10 </ListGroup.Item>
+                                            <ListGroup.Item style={{width: '8rem'}} > {ratedDoggo.description} </ListGroup.Item> 
+
                                         </ListGroup>
                                     </Card.Body>    
                                 </Card>
