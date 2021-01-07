@@ -32,6 +32,21 @@ export default ({props, _id}) => {
                 console.error(err);
             }
         };
+        // const deleteDog = async (id) => {
+        //     try {
+        //       const response = await fetch(`https://dog-rate-app.herokuapp.com/api/userdogs/${_id}`, {
+        //         method: 'DELETE',
+        //         headers: {
+        //           'Content-type': 'application/json',
+        //       }
+        //       })
+        //       const data = await response.json();
+        //       const filteredUserDogs = userDogs.filter(userDogs => userDogs._id !== data._id)
+        //       setUserDogs(filteredUserDogs);
+        //     } catch(error) {
+        //       console.error(error)
+        //     }
+        //   }
             return (
             <form onSubmit={updateApiDogs}>
                 Rate:<input type="number" ref={updateDogRateInputRef} />

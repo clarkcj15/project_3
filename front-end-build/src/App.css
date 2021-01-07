@@ -9,7 +9,9 @@ div .card-title.h5, .card-text  {
  background-color: whitesmoke;
 }
 div.form-group {
-  flex-direction: inline;
+  display: flex;
+  flex-direction: wrap;
+  gap: 10px;
 }
 div.card-body {
   display: flex;
@@ -21,7 +23,10 @@ div.card-body {
 h3 {
   color: #445658;
 }
-
+img.card-img.i{
+  display: flex;
+  flex-direction: center;
+}
 ul.user-dog-form{
   display: flex;
   flex-wrap: wrap;

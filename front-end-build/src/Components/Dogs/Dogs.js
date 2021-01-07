@@ -44,7 +44,7 @@ const Dogs = ({updateApiDogs}) => {
             <h1>Rate Our Dogs!</h1>
             </header>
             
-            <Card style={{width: '20rem'}}><Card.Img className="i" src={doggo.message} height="200px" width="250"/></Card>
+            <Card style={{width: '20rem'}} ><Card.Img className="i" src={doggo.message} height="200px" width="250"/></Card>
             
             <DogRateForm getDoggo={getDoggo} ratedDoggo={ratedDoggo} doggo={doggo}/>
             <ul className="dog-list">

@@ -55,18 +55,16 @@ export default ({ratedDoggo, getDoggo, doggo}) => {
     
     return(
         <Form onSubmit={createRating}>
-            <Form.Row className="align-items-center">
-                <Col xs="auto">
+            <Form.Row className="align-items-center" class="row justify-content-center">
                     <Form.Group>
                         <Form.Label>Dog Rate</Form.Label>
                         <Form.Control type="number" placeholder="Rate This Dog" ref={dogRateInputRef}/> /10
                         <br/>
-                        <Form.Label>Describe This Dog</Form.Label>
+                        <Form.Label>Describe Dog</Form.Label>
                         <Form.Control type="text" placeholder="Describe This Dog" ref={dogDescriptionInputRef}/>
                         <br/>
-                        <Button type="submit"> Rate This Dog</Button>{' '}
+                        <Button type="submit"> Rate Dog</Button>{' '}
                     </Form.Group>
-                </Col>
             </Form.Row>
         </Form>
     )

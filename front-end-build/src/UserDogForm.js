@@ -20,7 +20,7 @@ export default ({userDogs, fetchUserDogs, _id}) => {
         });
         event.currentTarget.reset();
         try {
-            await fetch(`https://dog-rate-app.herokuapp.com/api/doggos${_id}`, {
+            await fetch(`https://dog-rate-app.herokuapp.com/api/doggos`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -52,7 +52,7 @@ export default ({userDogs, fetchUserDogs, _id}) => {
 
             <Form.Label>Description:</Form.Label>
             <Form.Control type="text" placeholder="Describe Your Dog" ref={descriptionInputRef}/>
-            <Button type="submit">Rate Your Dog</Button>{' '}
+            <Button type="submit">Rate Dog</Button>{' '}
             </Form.Group> <br/>
             </Col>
             </Form.Row>

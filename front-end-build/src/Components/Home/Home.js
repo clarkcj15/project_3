@@ -8,9 +8,6 @@ const Home = () => {
             <Card.Img variant="top" src="https://res.cloudinary.com/dwpxepy1m/image/upload/v1609958891/IMG_5685_j93few.jpg" />
             <Card.Body>
             <Card.Title>Dog lovers of all kinds can come together and rate some dogs!</Card.Title>
-            <Card.Text>
-                enjoy :)
-            </Card.Text>
             </Card.Body>
         </Card>
     </div>
