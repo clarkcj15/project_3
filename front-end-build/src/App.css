@@ -5,8 +5,8 @@ button.btn.btn-primary{
   display: flex;
   flex-direction: center;
 }
-div .card-body, .card-title.h5, .card-text  {
-  background-color: whitesmoke;
+div .card-title.h5, .card-text  {
+ background-color: whitesmoke;
 }
 div.form-group {
   flex-direction: inline;
@@ -14,6 +14,9 @@ div.form-group {
 div.card-body {
   display: flex;
   flex-direction: row;
+  background-color: whitesmoke;
+  justify-content: center;
+  align-items: stretch;
 }
 h3 {
   color: #445658;
